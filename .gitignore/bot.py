@@ -4,6 +4,7 @@ from discord.ext.commands import Bot
 from discord.ext import commands
 import platform
 import time
+import os
  
 client = Bot(description="SciBot is best", command_prefix="&", pm_help = False)
 
