@@ -29,20 +29,6 @@ async def on_ready():
     print('Created by Utkarsh')
     return await client.change_presence(game=discord.Game(name='Reasearching More on Science&Tech | Looking for &help'))
     
-@client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
-    if message.content.upper().startswith('&SAY'):
-  
-        args = message.content.split(" ")
-        #args[0] = &SAY
-        #args[1] = Hey
-        #args[2] = There
-        #args[1:] = Hey There
-        await client.send_message(message.channel, "%s" % (" ".join(args[1:])))
-        await client.delete_message(message)
- 
     if message.content.startswith('&help'):
         msg = 'Here are few commands of SciBot- ```1.&technews-for tech news``` ``2.`` **&say <text> to let bot talk** ```3.&phynews - for physics news``` ``4.`` **&spacenews - for space news** ```5.Some other autoresponder commands```  {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
