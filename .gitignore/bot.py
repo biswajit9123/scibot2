@@ -30,7 +30,7 @@ async def on_ready():
     return await client.change_presence(game=discord.Game(name='Reasearching More on Science&Tech | Looking for &help'))
     
     if message.content.startswith('&help'):
-        msg = 'Here are few commands of SciBot- ```1.&technews-for tech news``` ``2.`` **&say <text> to let bot talk** ```3.&phynews - for physics news``` ``4.`` **&spacenews - for space news** ```5.Some other autoresponder commands```  {0.author.mention}'.format(message)
+        msg = 'Here are few commands of SciBot- ```1.&technews-for tech news``` ``3.`` **&phynews-for physics news** ```4.&spacenews - for space news``` ``5.``**Some other autoresponder commands**  {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
  
  
