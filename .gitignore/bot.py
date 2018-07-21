@@ -8,7 +8,18 @@ import os
  
 client = Bot(description="SciBot is best", command_prefix="&", pm_help = False)
 
+@client.event
+async def on_member_join(member):
+    server = member.server
+    fmt = 'Welcome {0.mention} to {1.name}! Please check rules and never try to break any rules.'
+    await client.send_message(server, fmt.format(member, server))
 
+@client.event
+async def on_member_leave(member):
+    server = member.server
+    fmt = '{0.mention} just left {1.name}!'
+    await client.send_message(server, fmt.format(member, server))
+    
 @client.event
 async def on_ready():
     print('Logged in as '+client.user.name+' (ID:'+client.user.id+') | Connected to '+str(len(client.servers))+' servers | Connected to '+str(len(set(client.get_all_members())))+' users')
