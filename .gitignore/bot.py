@@ -28,11 +28,6 @@ async def on_ready():
     print('Started SciBot')
     print('Created by Utkarsh')
     return await client.change_presence(game=discord.Game(name='Reasearching More on Science&Tech | Looking for &help'))
-    
-    if message.content.startswith('&help'):
-        msg = 'Here are few commands of SciBot- ```1.&technews-for tech news``` ``3.`` **&phynews-for physics news** ```4.&spacenews - for space news``` ``5.``**Some other autoresponder commands**  {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
- 
  
     if message.content.startswith('gm'):
         msg = 'Good Morining! {0.author.mention}'.format(message)
