@@ -35,88 +35,91 @@ async def on_ready():
  
 @client.event
 async def on_message(message):
-    if 'Who is your creator?' in message.content:
-        msg = 'DarkLegend#3807 is my creator'.format(message)
-        msg2 = await client.send_message(message.channel, msg)
+    if message.author.bot:
+      return
+    else:
+      if 'Who is your creator?' in message.content:
+          msg = 'DarkLegend#3807 is my creator'.format(message)
+          msg2 = await client.send_message(message.channel, msg)
        
-    if 'fuck' in message.content:
-        msg = 'Do not use bad words {0.author.name}'.format(message)
-        msg2 = await client.send_message(message.channel, msg)
-        await client.delete_message(message)
-        await asyncio.sleep(5)
-        await client.delete_message(msg2)
+      if 'fuck' in message.content:
+          msg = 'Do not use bad words {0.author.name}'.format(message)
+          msg2 = await client.send_message(message.channel, msg)
+          await client.delete_message(message)
+          await asyncio.sleep(5)
+          await client.delete_message(msg2)
         
-    if 'FUCK' in message.content:
-        msg = 'Do not use bad words {0.author.name}'.format(message)
-        msg2 = await client.send_message(message.channel, msg)
-        await client.delete_message(message)
-        await asyncio.sleep(5)
-        await client.delete_message(msg2)
+      if 'FUCK' in message.content:
+          msg = 'Do not use bad words {0.author.name}'.format(message)
+          msg2 = await client.send_message(message.channel, msg)
+          await client.delete_message(message)
+          await asyncio.sleep(5)
+          await client.delete_message(msg2)
         
-    if 'asshole' in message.content:
-        msg = 'Do not use bad words {0.author.name}'.format(message)
-        msg2 = await client.send_message(message.channel, msg)
-        await client.delete_message(message)
-        await asyncio.sleep(5)
-        await client.delete_message(msg2)
-        
-        
-    if 'ASSHOLE' in message.content:
-        msg = 'Do not use bad words {0.author.name}'.format(message)
-        msg2 = await client.send_message(message.channel, msg)
-        await client.delete_message(message)
-        await asyncio.sleep(5)
-        await client.delete_message(msg2)
+      if 'asshole' in message.content:
+          msg = 'Do not use bad words {0.author.name}'.format(message)
+          msg2 = await client.send_message(message.channel, msg)
+          await client.delete_message(message)
+          await asyncio.sleep(5)
+          await client.delete_message(msg2)
         
         
-    if 'Bahench' in message.content:
-        msg = 'Do not use bad words {0.author.name}'.format(message)
-        msg2 = await client.send_message(message.channel, msg)
-        await client.delete_message(message)
-        await asyncio.sleep(5)
-        await client.delete_message(msg2)
-        
-    if 'Fuck' in message.content:
-        msg = 'Do not use bad words {0.author.name}'.format(message)
-        msg2 = await client.send_message(message.channel, msg)
-        await client.delete_message(message)
-        await asyncio.sleep(5)
-        await client.delete_message(msg2)
-        
-    if 'chut' in message.content:
-        msg = 'Do not use bad words {0.author.name}'.format(message)
-        msg2 = await client.send_message(message.channel, msg)
-        await client.delete_message(message)
-        await asyncio.sleep(5)
-        await client.delete_message(msg2)
+      if 'ASSHOLE' in message.content:
+          msg = 'Do not use bad words {0.author.name}'.format(message)
+          msg2 = await client.send_message(message.channel, msg)
+          await client.delete_message(message)
+          await asyncio.sleep(5)
+          await client.delete_message(msg2)
         
         
-    if 'chod' in message.content:
-        msg = 'Do not use bad words {0.author.name}'.format(message)
-        msg2 = await client.send_message(message.channel, msg)
-        await client.delete_message(message)
-        await asyncio.sleep(5)
-        await client.delete_message(msg2)
+      if 'Bahench' in message.content:
+          msg = 'Do not use bad words {0.author.name}'.format(message)
+          msg2 = await client.send_message(message.channel, msg)
+          await client.delete_message(message)
+          await asyncio.sleep(5)
+          await client.delete_message(msg2)
         
-    if 'Chod' in message.content:
-        msg = 'Do not use bad words {0.author.name}'.format(message)
-        msg2 = await client.send_message(message.channel, msg)
-        await client.delete_message(message)
-        await asyncio.sleep(5)
-        await client.delete_message(msg2)
+      if 'Fuck' in message.content:
+          msg = 'Do not use bad words {0.author.name}'.format(message)
+          msg2 = await client.send_message(message.channel, msg)
+          await client.delete_message(message)
+          await asyncio.sleep(5)
+          await client.delete_message(msg2)
+        
+      if 'chut' in message.content:
+          msg = 'Do not use bad words {0.author.name}'.format(message)
+          msg2 = await client.send_message(message.channel, msg)
+          await client.delete_message(message)
+          await asyncio.sleep(5)
+          await client.delete_message(msg2)
+        
+        
+      if 'chod' in message.content:
+          msg = 'Do not use bad words {0.author.name}'.format(message)
+          msg2 = await client.send_message(message.channel, msg)
+          await client.delete_message(message)
+          await asyncio.sleep(5)
+          await client.delete_message(msg2)
+        
+      if 'Chod' in message.content:
+          msg = 'Do not use bad words {0.author.name}'.format(message)
+          msg2 = await client.send_message(message.channel, msg)
+          await client.delete_message(message)
+          await asyncio.sleep(5)
+          await client.delete_message(msg2)
        
-    if 'bsdk' in message.content:
-        msg = 'Do not use bad words {0.author.name}'.format(message)
-        msg2 = await client.send_message(message.channel, msg)
-        await client.delete_message(message)
-        await asyncio.sleep(5)
-        await client.delete_message(msg2)
+      if 'bsdk' in message.content:
+          msg = 'Do not use bad words {0.author.name}'.format(message)
+          msg2 = await client.send_message(message.channel, msg)
+          await client.delete_message(message)
+          await asyncio.sleep(5)
+          await client.delete_message(msg2)
        
-    if 'bhosd' in message.content:
-        msg = 'Do not use bad words {0.author.name}'.format(message)
-        msg2 = await client.send_message(message.channel, msg)
-        await client.delete_message(message)
-        await asyncio.sleep(5)
-        await client.delete_message(msg2)
+      if 'bhosd' in message.content:
+          msg = 'Do not use bad words {0.author.name}'.format(message)
+          msg2 = await client.send_message(message.channel, msg)
+          await client.delete_message(message)
+          await asyncio.sleep(5)
+          await client.delete_message(msg2)
         
 client.run(os.getenv('Token'))
