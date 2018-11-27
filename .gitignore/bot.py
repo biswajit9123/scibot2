@@ -33,133 +33,90 @@ async def on_ready():
         msg = 'Good Morining! {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
  
-    if message.content.startswith('hi bot'):
-        msg = 'Hello {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)        
-    if message.content.startswith('gm'):
-        msg = 'Good Morining! {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
+@client.event
+async def on_message(message):
+    if 'Who is your creator?' in message.content:
+        msg = 'DarkLegend#3807 is my creator'.format(message)
+        msg2 = await client.send_message(message.channel, msg)
        
-    if message.content.startswith('cya bot'):
-        msg = 'Cya! {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
+    if 'fuck' in message.content:
+        msg = 'Do not use bad words {0.author.name}'.format(message)
+        msg2 = await client.send_message(message.channel, msg)
+        await client.delete_message(message)
+        await asyncio.sleep(5)
+        await client.delete_message(msg2)
+        
+    if 'FUCK' in message.content:
+        msg = 'Do not use bad words {0.author.name}'.format(message)
+        msg2 = await client.send_message(message.channel, msg)
+        await client.delete_message(message)
+        await asyncio.sleep(5)
+        await client.delete_message(msg2)
+        
+    if 'asshole' in message.content:
+        msg = 'Do not use bad words {0.author.name}'.format(message)
+        msg2 = await client.send_message(message.channel, msg)
+        await client.delete_message(message)
+        await asyncio.sleep(5)
+        await client.delete_message(msg2)
+        
+        
+    if 'ASSHOLE' in message.content:
+        msg = 'Do not use bad words {0.author.name}'.format(message)
+        msg2 = await client.send_message(message.channel, msg)
+        await client.delete_message(message)
+        await asyncio.sleep(5)
+        await client.delete_message(msg2)
+        
+        
+    if 'Bahench' in message.content:
+        msg = 'Do not use bad words {0.author.name}'.format(message)
+        msg2 = await client.send_message(message.channel, msg)
+        await client.delete_message(message)
+        await asyncio.sleep(5)
+        await client.delete_message(msg2)
+        
+     if 'Fuck' in message.content:
+        msg = 'Do not use bad words {0.author.name}'.format(message)
+        msg2 = await client.send_message(message.channel, msg)
+        await client.delete_message(message)
+        await asyncio.sleep(5)
+        await client.delete_message(msg2)
+        
+     if 'chut' in message.content:
+        msg = 'Do not use bad words {0.author.name}'.format(message)
+        msg2 = await client.send_message(message.channel, msg)
+        await client.delete_message(message)
+        await asyncio.sleep(5)
+        await client.delete_message(msg2)
+        
+        
+     if 'chod' in message.content:
+        msg = 'Do not use bad words {0.author.name}'.format(message)
+        msg2 = await client.send_message(message.channel, msg)
+        await client.delete_message(message)
+        await asyncio.sleep(5)
+        await client.delete_message(msg2)
+        
+     if 'Chod' in message.content:
+        msg = 'Do not use bad words {0.author.name}'.format(message)
+        msg2 = await client.send_message(message.channel, msg)
+        await client.delete_message(message)
+        await asyncio.sleep(5)
+        await client.delete_message(msg2)
        
-    if message.content.startswith('bye bot'):
-        msg = 'Bye! {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
+     if 'bsdk' in message.content:
+        msg = 'Do not use bad words {0.author.name}'.format(message)
+        msg2 = await client.send_message(message.channel, msg)
+        await client.delete_message(message)
+        await asyncio.sleep(5)
+        await client.delete_message(msg2)
        
-    if message.content.startswith('gtg bot'):
-        msg = 'gtg! {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
-       
-    if message.content.startswith('yo bot'):
-        msg = 'yo {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
- 
-    if message.content.startswith('Why Ganga river is pure?'):
-        msg = '{0.author.mention} Bacteriophage is the bacteria which is the major cause if it. For more information check- https://en.wikipedia.org/wiki/Bacteriophage '.format(message)
-        await client.send_message(message.channel, msg)
- 
-    if message.content.startswith('What is matter?'):
-        msg = '{0.author.mention} Matter maybe defined as-Anything which occupies space,have mass,offers ressistance and can be felt from one or more sence organs. For more information check- https://en.wikipedia.org/wiki/Matter'.format(message)
-        await client.send_message(message.channel, msg)
- 
-    if message.content.startswith('I am also fine'):
-        msg = 'Nice :) {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
- 
-    if message.content.startswith('&spacenews'):
-        msg = '**Visit this for todays space news- https://www.sciencealert.com/space** '.format(message)
-        await client.send_message(message.channel, msg)
- 
-    if message.content.startswith('gn'):
-        msg = '**Good Night!** {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
- 
-    if message.content.startswith('kya haal hai bot'):
-        msg = 'Mai thik hu! aur tum {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
- 
-    if message.content.startswith('mai bhi thik hu'):
-        msg = 'Badhiya! {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
- 
-    if message.content.startswith('what a lovely bot'):
-        msg = 'Thanks :heart_eyes: ! {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
- 
-    if message.content.startswith('nice bot'):
-        msg = 'Thanks :heart_eyes: ! {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
- 
-    if message.content.startswith('What a nice bot'):
-        msg = 'Thanks :heart_eyes: ! {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
-       
-    if message.content.startswith('&authlink'):
-        msg = 'Authorise this bot using this link- https://discordapp.com/api/oauth2/authorize?client_id=433138197376139277&permissions=8&scope=bot {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
- 
-    if message.content.startswith('Good Morning'):
-        msg = 'Good Morning ! {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
- 
-    if message.content.startswith('Good Night'):
-        msg = 'Good Night ! {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
- 
-    if message.content.startswith('&technews'):
-        msg = '**Visit this for todays tech news- https://www.sciencealert.com/tech**'.format(message)
-        await client.send_message(message.channel, msg)
-   
-    if message.content.startswith('What are Quarks?'):
-        msg = '**Number of subatomic particles carrying a fractional electric charge, knows as building blocks of the hadrons. Quarks have not been directly observed but theoretical predictions based on their existence have been confirmed experimentally. There are 6 types of quarks- 1)Top quark, 2)Bottom Quark, 3)Charm Quark, 4)Up quark, 5)Down Quark and 6)Strange Quark.** *For more info check-* https://en.wikipedia.org/wiki/Quark .'.format(message)
-        await client.send_message(message.channel, msg)
- 
-    if message.content.startswith('i am coding my bot'):
-        msg = 'Yeah he is coding me bro! Dont disturb him!'.format(message)
-        await client.send_message(message.channel, msg)
- 
-    if message.content.startswith('&trendgames'):
-        msg = '1)PUBG, 2) GTA5 Game, 3)Mini Miltia Tutorials, 4)PUBG Good Edited Videos, etc...'.format(message)
-        await client.send_message(message.channel, msg)
- 
-    if message.content.startswith('&dev'):
-        msg = 'This bot is under development.'.format(message)
-        await client.send_message(message.channel, msg)
- 
-    if message.content.startswith('&phynews'):
-        msg = '**Visit this for todays physics news- https://www.sciencealert.com/physics**'.format(message)
-        await client.send_message(message.channel, msg)
- 
-    if message.content.startswith('How are you bot?'):
-        msg = 'I am fine ! What about you? ! {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
- 
-    if message.content.startswith('sup bot'):
-        msg = 'I am fine ! What about you? ! {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
- 
-    if message.content.startswith('chup'):
-        msg = 'Talk Properly! {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
- 
-    if message.content.startswith('hatt'):
-        msg = 'Talk properly! {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
- 
-    if message.content.startswith('What is streptomycin?'):
-        msg = 'An antibiotic that was the first drug to be successful against tuberculosis but is now chiefly used with other drugs because of its toxic side effects.{0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
-     
-    if message.content.startswith('Who is Royal?'):
-        msg = 'He is a pro hacker.{0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
- 
-    if message.content.startswith('Who is your creator bot?'):
-        msg = '<@420525168381657090> is my creator.{0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
- 
-       
-       
+     if 'bhosd' in message.content:
+        msg = 'Do not use bad words {0.author.name}'.format(message)
+        msg2 = await client.send_message(message.channel, msg)
+        await client.delete_message(message)
+        await asyncio.sleep(5)
+        await client.delete_message(msg2)
+        
 client.run(os.getenv('Token'))
