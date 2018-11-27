@@ -76,14 +76,14 @@ async def on_message(message):
         await asyncio.sleep(5)
         await client.delete_message(msg2)
         
-     if 'Fuck' in message.content:
+    if 'Fuck' in message.content:
         msg = 'Do not use bad words {0.author.name}'.format(message)
         msg2 = await client.send_message(message.channel, msg)
         await client.delete_message(message)
         await asyncio.sleep(5)
         await client.delete_message(msg2)
         
-     if 'chut' in message.content:
+    if 'chut' in message.content:
         msg = 'Do not use bad words {0.author.name}'.format(message)
         msg2 = await client.send_message(message.channel, msg)
         await client.delete_message(message)
@@ -91,28 +91,28 @@ async def on_message(message):
         await client.delete_message(msg2)
         
         
-     if 'chod' in message.content:
+    if 'chod' in message.content:
         msg = 'Do not use bad words {0.author.name}'.format(message)
         msg2 = await client.send_message(message.channel, msg)
         await client.delete_message(message)
         await asyncio.sleep(5)
         await client.delete_message(msg2)
         
-     if 'Chod' in message.content:
+    if 'Chod' in message.content:
         msg = 'Do not use bad words {0.author.name}'.format(message)
         msg2 = await client.send_message(message.channel, msg)
         await client.delete_message(message)
         await asyncio.sleep(5)
         await client.delete_message(msg2)
        
-     if 'bsdk' in message.content:
+    if 'bsdk' in message.content:
         msg = 'Do not use bad words {0.author.name}'.format(message)
         msg2 = await client.send_message(message.channel, msg)
         await client.delete_message(message)
         await asyncio.sleep(5)
         await client.delete_message(msg2)
        
-     if 'bhosd' in message.content:
+    if 'bhosd' in message.content:
         msg = 'Do not use bad words {0.author.name}'.format(message)
         msg2 = await client.send_message(message.channel, msg)
         await client.delete_message(message)
