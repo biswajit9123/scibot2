@@ -37,6 +37,7 @@ async def on_ready():
  
 @client.event
 async def on_message_delete(message):
+    user = message.author
     for channel in user.server.channels:
       if channel.name == '╰☆☆-multiverse-log-☆☆╮':
           r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
