@@ -29,11 +29,6 @@ async def on_ready():
     print('--------')
     print('Started SciBot')
     print('Created by Utkarsh')
-    return await client.change_presence(game=discord.Game(name='Reasearching More on Science&Tech | Looking for &help'))
- 
-    if message.content.startswith('gm'):
-        msg = 'Good Morining! {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
  
 @client.event
 async def on_message_delete(message):
