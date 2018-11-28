@@ -93,10 +93,6 @@ async def on_message(message):
           msg = 'Cool! {}'.format(message.author.name)
           msg2 = await client.send_message(message.channel, msg)          
           
-      if 'am also fine bot' in message.content:
-          msg = 'Cool! {}'.format(message.author.name)
-          msg2 = await client.send_message(message.channel, msg)          
-                    
       if 'fuck' in message.content:
           msg = 'Do not use bad words {0.author.name}'.format(message)
           msg2 = await client.send_message(message.channel, msg)
