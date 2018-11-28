@@ -5,6 +5,8 @@ from discord.ext import commands
 import platform
 import time
 import os
+import colorsys
+import random
  
 client = Bot(description="SciBot is best", command_prefix="&", pm_help = False)
 
@@ -35,20 +37,29 @@ async def on_ready():
  
 @client.event
 async def on_message(message):
+    user = message.author
     if message.author.bot:
       return
     else:
       if 'Who is your creator?' in message.content:
           msg = 'DarkLegend#3807 is my creator'.format(message)
           msg2 = await client.send_message(message.channel, msg)
-       
+          
       if 'fuck' in message.content:
           msg = 'Do not use bad words {0.author.name}'.format(message)
           msg2 = await client.send_message(message.channel, msg)
           await client.delete_message(message)
           await asyncio.sleep(5)
           await client.delete_message(msg2)
-        
+          for channel in user.server.channels:
+            if channel.name == '╰☆☆-multiverse-log-☆☆╮':
+                r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
+                embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
+                embed.set_author(name='Warned user')
+                embed.add_field(name = 'User: **{0}**'.format(user.name),value ='UserID: **{}**'.format(user.id),inline = False)
+                embed.add_field(name = 'Reason: **Used bad words**',value ='Word: **fuck**',inline = False)
+                await client.send_message(channel, embed=embed)
+      
       if 'FUCK' in message.content:
           msg = 'Do not use bad words {0.author.name}'.format(message)
           msg2 = await client.send_message(message.channel, msg)
