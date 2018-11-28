@@ -69,11 +69,11 @@ async def on_message(message):
           msg = 'Hello {}'.format(message.author.name)
           msg2 = await client.send_message(message.channel, msg)
           
-      if 'how are you bot bot?' in message.content:
+      if 'how are you bot?' in message.content:
           msg = 'I am fine what about you? {}'.format(message.author.name)
           msg2 = await client.send_message(message.channel, msg)
          
-      if 'How are you bot bot?' in message.content:
+      if 'How are you bot?' in message.content:
           msg = 'I am fine what about you? {}'.format(message.author.name)
           msg2 = await client.send_message(message.channel, msg)
           
@@ -86,15 +86,15 @@ async def on_message(message):
           msg2 = await client.send_message(message.channel, msg)         
           
       if 'I am also fine bot' in message.content:
-          msg = 'I am fine what about you? {}'.format(message.author.name)
+          msg = 'Cool! {}'.format(message.author.name)
           msg2 = await client.send_message(message.channel, msg)          
          
       if 'i am also fine bot' in message.content:
-          msg = 'I am fine what about you? {}'.format(message.author.name)
+          msg = 'Cool! {}'.format(message.author.name)
           msg2 = await client.send_message(message.channel, msg)          
           
       if 'am also fine bot' in message.content:
-          msg = 'I am fine what about you? {}'.format(message.author.name)
+          msg = 'Cool! {}'.format(message.author.name)
           msg2 = await client.send_message(message.channel, msg)          
                     
       if 'fuck' in message.content:
