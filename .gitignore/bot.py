@@ -49,10 +49,54 @@ async def on_message(message):
     if message.author.bot:
       return
     else:
-      if 'Who is your creator?' in message.content:
+      if 'Who is your creator bot?' in message.content:
           msg = 'DarkLegend#3807 is my creator'.format(message)
           msg2 = await client.send_message(message.channel, msg)
+         
+      if 'hi bot' in message.content:
+          msg = 'Hello {}'.format(message.author.name)
+          msg2 = await client.send_message(message.channel, msg)
+         
+      if 'hello bot' in message.content:
+          msg = 'Hello {}'.format(message.author.name)
+          msg2 = await client.send_message(message.channel, msg)
+         
+      if 'Hi bot' in message.content:
+          msg = 'Hello {}'.format(message.author.name)
+          msg2 = await client.send_message(message.channel, msg)
           
+      if 'Hello bot' in message.content:
+          msg = 'Hello {}'.format(message.author.name)
+          msg2 = await client.send_message(message.channel, msg)
+          
+      if 'how are you bot bot?' in message.content:
+          msg = 'I am fine what about you? {}'.format(message.author.name)
+          msg2 = await client.send_message(message.channel, msg)
+         
+      if 'How are you bot bot?' in message.content:
+          msg = 'I am fine what about you? {}'.format(message.author.name)
+          msg2 = await client.send_message(message.channel, msg)
+          
+      if 'sup bot' in message.content:
+          msg = 'I am fine what about you? {}'.format(message.author.name)
+          msg2 = await client.send_message(message.channel, msg)
+         
+      if 'Sup bot' in message.content:
+          msg = 'I am fine what about you? {}'.format(message.author.name)
+          msg2 = await client.send_message(message.channel, msg)         
+          
+      if 'I am also fine bot' in message.content:
+          msg = 'I am fine what about you? {}'.format(message.author.name)
+          msg2 = await client.send_message(message.channel, msg)          
+         
+      if 'i am also fine bot' in message.content:
+          msg = 'I am fine what about you? {}'.format(message.author.name)
+          msg2 = await client.send_message(message.channel, msg)          
+          
+      if 'am also fine bot' in message.content:
+          msg = 'I am fine what about you? {}'.format(message.author.name)
+          msg2 = await client.send_message(message.channel, msg)          
+                    
       if 'fuck' in message.content:
           msg = 'Do not use bad words {0.author.name}'.format(message)
           msg2 = await client.send_message(message.channel, msg)
