@@ -112,6 +112,7 @@ async def on_message(message):
                 embed.add_field(name = 'Reason: **Used bad words**',value ='Word: **fuck**',inline = False)
                 embed.add_field(name = 'Type of bad word:',value ='English bad word',inline = False)
                 embed.add_field(name = 'Channel:',value ='{}'.format(message.channel.name),inline = False)
+                embed.add_field(name = 'Message:',value ='{}'.format(message.content),inline = False)
                 await client.send_message(channel, embed=embed)
       
       if 'FUCK' in message.content:
@@ -129,6 +130,7 @@ async def on_message(message):
                 embed.add_field(name = 'Reason: **Used bad words**',value ='Word: **FUCK**',inline = False)
                 embed.add_field(name = 'Type of bad word:',value ='English bad word',inline = False)
                 embed.add_field(name = 'Channel:',value ='{}'.format(message.channel.name),inline = False)
+                embed.add_field(name = 'Message:',value ='{}'.format(message.content),inline = False)
                 await client.send_message(channel, embed=embed)
         
       if 'asshole' in message.content:
@@ -146,6 +148,7 @@ async def on_message(message):
                 embed.add_field(name = 'Reason: **Used bad words**',value ='Word: **asshole**',inline = False)
                 embed.add_field(name = 'Type of bad word:',value ='English bad word',inline = False)
                 embed.add_field(name = 'Channel:',value ='{}'.format(message.channel.name),inline = False)
+                embed.add_field(name = 'Message:',value ='{}'.format(message.content),inline = False)
                 await client.send_message(channel, embed=embed)
         
       if 'ASSHOLE' in message.content:
@@ -163,6 +166,7 @@ async def on_message(message):
                 embed.add_field(name = 'Reason: **Used bad words**',value ='Word: **ASSHOLE**',inline = False)
                 embed.add_field(name = 'Type of bad word:',value ='English bad word',inline = False)
                 embed.add_field(name = 'Channel:',value ='{}'.format(message.channel.name),inline = False)
+                embed.add_field(name = 'Message:',value ='{}'.format(message.content),inline = False)
                 await client.send_message(channel, embed=embed)
                 
       if 'Fuck' in message.content:
@@ -180,6 +184,7 @@ async def on_message(message):
                 embed.add_field(name = 'Reason: **Used bad words**',value ='Word: **Fuck**',inline = False)
                 embed.add_field(name = 'Type of bad word:',value ='English bad word',inline = False)
                 embed.add_field(name = 'Channel:',value ='{}'.format(message.channel.name),inline = False)
+                embed.add_field(name = 'Message:',value ='{}'.format(message.content),inline = False)
                 await client.send_message(channel, embed=embed)
         
       if 'chut' in message.content:
@@ -196,6 +201,7 @@ async def on_message(message):
                 embed.add_field(name = 'User: **{0}**'.format(user.name),value ='UserID: **{}**'.format(user.id),inline = False)
                 embed.add_field(name = 'Reason: **Used bad words**',value ='Word: **chut**',inline = False)
                 embed.add_field(name = 'Type of bad word:',value ='Hindi bad word',inline = False)
+                embed.add_field(name = 'Message:',value ='{}'.format(message.content),inline = False)
                 embed.add_field(name = 'Channel:',value ='{}'.format(message.channel.name),inline = False)
                 await client.send_message(channel, embed=embed)
         
@@ -214,6 +220,7 @@ async def on_message(message):
                 embed.add_field(name = 'Reason: **Used bad words**',value ='Word: **chod**',inline = False)
                 embed.add_field(name = 'Type of bad word:',value ='Hindi bad word',inline = False)
                 embed.add_field(name = 'Channel:',value ='{}'.format(message.channel.name),inline = False)
+                embed.add_field(name = 'Message:',value ='{}'.format(message.content),inline = False)
                 await client.send_message(channel, embed=embed)
         
       if 'Chod' in message.content:
@@ -231,6 +238,7 @@ async def on_message(message):
                 embed.add_field(name = 'Reason: **Used bad words**',value ='Word: **Chod**',inline = False)
                 embed.add_field(name = 'Type of bad word:',value ='Hindi bad word',inline = False)
                 embed.add_field(name = 'Channel:',value ='{}'.format(message.channel.name),inline = False)
+                embed.add_field(name = 'Message:',value ='{}'.format(message.content),inline = False)
                 await client.send_message(channel, embed=embed)
        
       if 'bsdk' in message.content:
@@ -248,6 +256,7 @@ async def on_message(message):
                 embed.add_field(name = 'Reason: **Used bad words**',value ='Word: **bsdk**',inline = False)
                 embed.add_field(name = 'Type of bad word:',value ='Hindi bad word(Shortform abuse)',inline = False)
                 embed.add_field(name = 'Channel:',value ='{}'.format(message.channel.name),inline = False)
+                embed.add_field(name = 'Message:',value ='{}'.format(message.content),inline = False)
                 await client.send_message(channel, embed=embed)
        
       if 'bhosd' in message.content:
@@ -265,6 +274,7 @@ async def on_message(message):
                 embed.add_field(name = 'Reason: **Used bad words**',value ='Word: **bhosd...**',inline = False)
                 embed.add_field(name = 'Type of bad word:',value ='Hindi bad word(Short form abuse)',inline = False)
                 embed.add_field(name = 'Channel:',value ='{}'.format(message.channel.name),inline = False)
+                embed.add_field(name = 'Message:',value ='{}'.format(message.content),inline = False)
                 await client.send_message(channel, embed=embed)
         
 client.run(os.getenv('Token'))
