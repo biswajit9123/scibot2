@@ -49,6 +49,10 @@ async def on_message(message):
     if message.author.bot:
       return
     else:
+      if message.content.startswith('d!donate'):
+          msg = '**Support us by donating us;** https://www.paypal.me/RVerma181'
+          await client.send_message(message.channel, msg)
+        
       if 'Who is your creator bot?' in message.content:
           msg = 'DarkLegend#3807 is my creator'.format(message)
           msg2 = await client.send_message(message.channel, msg)
