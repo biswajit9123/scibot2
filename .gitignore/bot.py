@@ -58,6 +58,8 @@ async def on_message(message):
                 embed.set_author(name='Warned user')
                 embed.add_field(name = 'User: **{0}**'.format(user.name),value ='UserID: **{}**'.format(user.id),inline = False)
                 embed.add_field(name = 'Reason: **Used bad words**',value ='Word: **fuck**',inline = False)
+                embed.add_field(name = 'Type of bad word:',value ='English bad word',inline = False)
+                embed.add_field(name = 'Channel:',value ='{}'.format(message.channel.name),inline = False)
                 await client.send_message(channel, embed=embed)
       
       if 'FUCK' in message.content:
@@ -66,6 +68,16 @@ async def on_message(message):
           await client.delete_message(message)
           await asyncio.sleep(5)
           await client.delete_message(msg2)
+          for channel in user.server.channels:
+            if channel.name == '╰☆☆-multiverse-log-☆☆╮':
+                r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
+                embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
+                embed.set_author(name='Warned user')
+                embed.add_field(name = 'User: **{0}**'.format(user.name),value ='UserID: **{}**'.format(user.id),inline = False)
+                embed.add_field(name = 'Reason: **Used bad words**',value ='Word: **FUCK**',inline = False)
+                embed.add_field(name = 'Type of bad word:',value ='English bad word',inline = False)
+                embed.add_field(name = 'Channel:',value ='{}'.format(message.channel.name),inline = False)
+                await client.send_message(channel, embed=embed)
         
       if 'asshole' in message.content:
           msg = 'Do not use bad words {0.author.name}'.format(message)
@@ -73,7 +85,16 @@ async def on_message(message):
           await client.delete_message(message)
           await asyncio.sleep(5)
           await client.delete_message(msg2)
-        
+          for channel in user.server.channels:
+            if channel.name == '╰☆☆-multiverse-log-☆☆╮':
+                r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
+                embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
+                embed.set_author(name='Warned user')
+                embed.add_field(name = 'User: **{0}**'.format(user.name),value ='UserID: **{}**'.format(user.id),inline = False)
+                embed.add_field(name = 'Reason: **Used bad words**',value ='Word: **asshole**',inline = False)
+                embed.add_field(name = 'Type of bad word:',value ='English bad word',inline = False)
+                embed.add_field(name = 'Channel:',value ='{}'.format(message.channel.name),inline = False)
+                await client.send_message(channel, embed=embed)
         
       if 'ASSHOLE' in message.content:
           msg = 'Do not use bad words {0.author.name}'.format(message)
@@ -81,21 +102,33 @@ async def on_message(message):
           await client.delete_message(message)
           await asyncio.sleep(5)
           await client.delete_message(msg2)
-        
-        
-      if 'Bahench' in message.content:
-          msg = 'Do not use bad words {0.author.name}'.format(message)
-          msg2 = await client.send_message(message.channel, msg)
-          await client.delete_message(message)
-          await asyncio.sleep(5)
-          await client.delete_message(msg2)
-        
+          for channel in user.server.channels:
+            if channel.name == '╰☆☆-multiverse-log-☆☆╮':
+                r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
+                embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
+                embed.set_author(name='Warned user')
+                embed.add_field(name = 'User: **{0}**'.format(user.name),value ='UserID: **{}**'.format(user.id),inline = False)
+                embed.add_field(name = 'Reason: **Used bad words**',value ='Word: **ASSHOLE**',inline = False)
+                embed.add_field(name = 'Type of bad word:',value ='English bad word',inline = False)
+                embed.add_field(name = 'Channel:',value ='{}'.format(message.channel.name),inline = False)
+                await client.send_message(channel, embed=embed)
+                
       if 'Fuck' in message.content:
           msg = 'Do not use bad words {0.author.name}'.format(message)
           msg2 = await client.send_message(message.channel, msg)
           await client.delete_message(message)
           await asyncio.sleep(5)
           await client.delete_message(msg2)
+          for channel in user.server.channels:
+            if channel.name == '╰☆☆-multiverse-log-☆☆╮':
+                r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
+                embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
+                embed.set_author(name='Warned user')
+                embed.add_field(name = 'User: **{0}**'.format(user.name),value ='UserID: **{}**'.format(user.id),inline = False)
+                embed.add_field(name = 'Reason: **Used bad words**',value ='Word: **Fuck**',inline = False)
+                embed.add_field(name = 'Type of bad word:',value ='English bad word',inline = False)
+                embed.add_field(name = 'Channel:',value ='{}'.format(message.channel.name),inline = False)
+                await client.send_message(channel, embed=embed)
         
       if 'chut' in message.content:
           msg = 'Do not use bad words {0.author.name}'.format(message)
@@ -103,7 +136,16 @@ async def on_message(message):
           await client.delete_message(message)
           await asyncio.sleep(5)
           await client.delete_message(msg2)
-        
+          for channel in user.server.channels:
+            if channel.name == '╰☆☆-multiverse-log-☆☆╮':
+                r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
+                embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
+                embed.set_author(name='Warned user')
+                embed.add_field(name = 'User: **{0}**'.format(user.name),value ='UserID: **{}**'.format(user.id),inline = False)
+                embed.add_field(name = 'Reason: **Used bad words**',value ='Word: **chut**',inline = False)
+                embed.add_field(name = 'Type of bad word:',value ='Hindi bad word',inline = False)
+                embed.add_field(name = 'Channel:',value ='{}'.format(message.channel.name),inline = False)
+                await client.send_message(channel, embed=embed)
         
       if 'chod' in message.content:
           msg = 'Do not use bad words {0.author.name}'.format(message)
@@ -111,6 +153,16 @@ async def on_message(message):
           await client.delete_message(message)
           await asyncio.sleep(5)
           await client.delete_message(msg2)
+          for channel in user.server.channels:
+            if channel.name == '╰☆☆-multiverse-log-☆☆╮':
+                r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
+                embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
+                embed.set_author(name='Warned user')
+                embed.add_field(name = 'User: **{0}**'.format(user.name),value ='UserID: **{}**'.format(user.id),inline = False)
+                embed.add_field(name = 'Reason: **Used bad words**',value ='Word: **chod**',inline = False)
+                embed.add_field(name = 'Type of bad word:',value ='Hindi bad word',inline = False)
+                embed.add_field(name = 'Channel:',value ='{}'.format(message.channel.name),inline = False)
+                await client.send_message(channel, embed=embed)
         
       if 'Chod' in message.content:
           msg = 'Do not use bad words {0.author.name}'.format(message)
@@ -118,6 +170,16 @@ async def on_message(message):
           await client.delete_message(message)
           await asyncio.sleep(5)
           await client.delete_message(msg2)
+          for channel in user.server.channels:
+            if channel.name == '╰☆☆-multiverse-log-☆☆╮':
+                r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
+                embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
+                embed.set_author(name='Warned user')
+                embed.add_field(name = 'User: **{0}**'.format(user.name),value ='UserID: **{}**'.format(user.id),inline = False)
+                embed.add_field(name = 'Reason: **Used bad words**',value ='Word: **Chod**',inline = False)
+                embed.add_field(name = 'Type of bad word:',value ='Hindi bad word',inline = False)
+                embed.add_field(name = 'Channel:',value ='{}'.format(message.channel.name),inline = False)
+                await client.send_message(channel, embed=embed)
        
       if 'bsdk' in message.content:
           msg = 'Do not use bad words {0.author.name}'.format(message)
@@ -125,6 +187,16 @@ async def on_message(message):
           await client.delete_message(message)
           await asyncio.sleep(5)
           await client.delete_message(msg2)
+          for channel in user.server.channels:
+            if channel.name == '╰☆☆-multiverse-log-☆☆╮':
+                r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
+                embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
+                embed.set_author(name='Warned user')
+                embed.add_field(name = 'User: **{0}**'.format(user.name),value ='UserID: **{}**'.format(user.id),inline = False)
+                embed.add_field(name = 'Reason: **Used bad words**',value ='Word: **bsdk**',inline = False)
+                embed.add_field(name = 'Type of bad word:',value ='Hindi bad word(Shortform abuse)',inline = False)
+                embed.add_field(name = 'Channel:',value ='{}'.format(message.channel.name),inline = False)
+                await client.send_message(channel, embed=embed)
        
       if 'bhosd' in message.content:
           msg = 'Do not use bad words {0.author.name}'.format(message)
@@ -132,5 +204,15 @@ async def on_message(message):
           await client.delete_message(message)
           await asyncio.sleep(5)
           await client.delete_message(msg2)
+          for channel in user.server.channels:
+            if channel.name == '╰☆☆-multiverse-log-☆☆╮':
+                r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
+                embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
+                embed.set_author(name='Warned user')
+                embed.add_field(name = 'User: **{0}**'.format(user.name),value ='UserID: **{}**'.format(user.id),inline = False)
+                embed.add_field(name = 'Reason: **Used bad words**',value ='Word: **bhosd...**',inline = False)
+                embed.add_field(name = 'Type of bad word:',value ='Hindi bad word(Short form abuse)',inline = False)
+                embed.add_field(name = 'Channel:',value ='{}'.format(message.channel.name),inline = False)
+                await client.send_message(channel, embed=embed)
         
 client.run(os.getenv('Token'))
