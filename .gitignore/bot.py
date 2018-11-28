@@ -36,6 +36,18 @@ async def on_ready():
         await client.send_message(message.channel, msg)
  
 @client.event
+async def on_message_delete(message):
+    for channel in user.server.channels:
+      if channel.name == '╰☆☆-multiverse-log-☆☆╮':
+          r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
+          embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
+          embed.set_author(name='Message deleted')
+          embed.add_field(name = 'User: **{0}**'.format(user.name),value ='UserID: **{}**'.format(user.id),inline = False)
+          embed.add_field(name = 'Message:',value ='{}'.format(message),inline = False)
+          embed.add_field(name = 'Channel:',value ='{}'.format(message.channel.name),inline = False)
+          await client.send_message(channel, embed=embed)
+ 
+@client.event
 async def on_message(message):
     user = message.author
     if message.author.bot:
