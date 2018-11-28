@@ -49,7 +49,7 @@ async def on_message(message):
     if message.author.bot:
       return
     else:
-      if message.content.startswith('d!donate'):
+      if message.content.startswith('mv!donate'):
           msg = '**Support us by donating us;** https://www.paypal.me/RVerma181'
           await client.send_message(message.channel, msg)
         
