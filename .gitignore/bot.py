@@ -43,7 +43,7 @@ async def on_message_edit(before, after):
 async def on_message_delete(message):
     if message.author.bot:
       return
-    if message.author.channel.name == '╰☆☆-multiverse-log-☆☆╮':
+    if message.channel.name == '╰☆☆-multiverse-log-☆☆╮':
      return
     else:
       user = message.author
