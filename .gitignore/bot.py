@@ -7,6 +7,7 @@ import time
 import os
 import colorsys
 import random
+import json
  
 client = Bot(description="SciBot is best", command_prefix="&", pm_help = False)
 
