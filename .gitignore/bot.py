@@ -22,7 +22,7 @@ async def on_ready():
 async def on_message_edit(before, after):
     if before.content == after.content:
       return
-    if before.author == bot.user:
+    if before.author == client.user:
       return
     else:
       user = before.author
