@@ -10,6 +10,10 @@ import random
 import json
  
 client = Bot(description="SciBot is best", command_prefix="&", pm_help = False)
+dark = discord.Client()
+user_id = message.author.id
+author_level = get_level(user_id)
+author_xp = get_xp(user_id)
 
 @client.event
 async def on_ready():
@@ -20,7 +24,7 @@ async def on_ready():
     print('Created by Utkarsh')
  
  
-@client.event
+@dark.event
 async def on_message(message):
     user_id = message.author.id
 
@@ -34,7 +38,7 @@ async def on_message(message):
         embed.set_author(name='Level Up!')
         embed.add_field(name = 'Congratulations User! ',value ='{}'.format(message.author.name),inline = False)
         embed.add_field(name = 'You are at ',value ='Level 1! Chat more and stay active to rankup fast',inline = False)
-        await client.send_message(channel, embed=embed)
+        await dark.send_message(channel, embed=embed)
 
     if author_level == 1 and author_xp >= 200:
         set_level(user_id, 2)
@@ -43,7 +47,7 @@ async def on_message(message):
         embed.set_author(name='Level Up!')
         embed.add_field(name = 'Congratulations User! ',value ='{}'.format(message.author.name),inline = False)
         embed.add_field(name = 'You are at ',value ='Level 2! Chat more and stay active to rankup fast',inline = False)
-        await client.send_message(channel, embed=embed)
+        await dark.send_message(channel, embed=embed)
         
     if author_level == 2 and author_xp >= 250:
         set_level(user_id, 3)
@@ -52,7 +56,7 @@ async def on_message(message):
         embed.set_author(name='Level Up!')
         embed.add_field(name = 'Congratulations User! ',value ='{}'.format(message.author.name),inline = False)
         embed.add_field(name = 'You are at ',value ='Level 3! Chat more and stay active to rankup fast',inline = False)
-        await client.send_message(channel, embed=embed)
+        await dark.send_message(channel, embed=embed)
     if author_level == 3 and author_xp >= 300:
         set_level(user_id, 4)
         r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
@@ -60,7 +64,7 @@ async def on_message(message):
         embed.set_author(name='Level Up!')
         embed.add_field(name = 'Congratulations User! ',value ='{}'.format(message.author.name),inline = False)
         embed.add_field(name = 'You are at ',value ='Level 4! Chat more and stay active to rankup fast',inline = False)
-        await client.send_message(channel, embed=embed)
+        await dark.send_message(channel, embed=embed)
     if author_level == 4 and author_xp >= 400:
         set_level(user_id, 5)
         r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
@@ -68,7 +72,7 @@ async def on_message(message):
         embed.set_author(name='Level Up!')
         embed.add_field(name = 'Congratulations User! ',value ='{}'.format(message.author.name),inline = False)
         embed.add_field(name = 'You are at ',value ='Level 5! Chat more and stay active to rankup fast',inline = False)
-        await client.send_message(channel, embed=embed)
+        await dark.send_message(channel, embed=embed)
     if author_level == 8 and author_xp >= 700:
         set_level(user_id, 9)
         r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
@@ -76,7 +80,7 @@ async def on_message(message):
         embed.set_author(name='Level Up!')
         embed.add_field(name = 'Congratulations User! ',value ='{}'.format(message.author.name),inline = False)
         embed.add_field(name = 'You are at ',value ='Level 9! Chat more and stay active to rankup fast',inline = False)
-        await client.send_message(channel, embed=embed)
+        await dark.send_message(channel, embed=embed)
     if author_level == 9 and author_xp >= 1000:
         set_level(user_id, 10)
         r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
@@ -84,14 +88,14 @@ async def on_message(message):
         embed.set_author(name='Level Up!')
         embed.add_field(name = 'Congratulations User! ',value ='{}'.format(message.author.name),inline = False)
         embed.add_field(name = 'You are at ',value ='Level 10! Chat more and stay active to rankup fast',inline = False)
-        await client.send_message(channel, embed=embed)
+        await dark.send_message(channel, embed=embed)
 
     if message.content.lower().startswith('mv!xp'):
-        await client.send_message(message.channel, "You have `{}` XP!".format(get_xp(message.author.id)))
+        await dark.send_message(message.channel, "You have `{}` XP!".format(get_xp(message.author.id)))
 
     if message.content.lower().startswith('mv!lvl'):
         level = get_level(user_id)
-        await client.send_message(message.channel, "You are at Level: {}".format(level))
+        await dark.send_message(message.channel, "You are at Level: {}".format(level))
 
     user_add_xp(message.author.id, 2)
 
