@@ -33,8 +33,8 @@ async def on_message_edit(before, after):
             embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
             embed.set_author(name='Message edited')
             embed.add_field(name = 'User: **{0}**'.format(user.name),value ='UserID: **{}**'.format(user.id),inline = False)
-            embed.add_field(name = 'Before:',value ='{}'.format(user),inline = False)
-            embed.add_field(name = 'After:',value ='{}'.format(member),inline = False)
+            embed.add_field(name = 'Before:',value ='{}'.format(before.message.content),inline = False)
+            embed.add_field(name = 'After:',value ='{}'.format(after.message.content),inline = False)
             embed.add_field(name = 'Channel:',value ='{}'.format(user.channel.name),inline = False)
             await client.send_message(channel, embed=embed)
  
