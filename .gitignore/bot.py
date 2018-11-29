@@ -11,24 +11,32 @@ import random
 client = Bot(description="SciBot is best", command_prefix="&", pm_help = False)
 
 @client.event
-async def on_member_join(member):
-    server = member.server
-    fmt = 'Welcome {0.mention} to {1.name}! Please check rules and never try to break any rules.'
-    await client.send_message(server, fmt.format(member, server))
-
-@client.event
-async def on_member_leave(member):
-    server = member.server
-    fmt = '{0.mention} just left {1.name}!'
-    await client.send_message(server, fmt.format(member, server))
-    
-@client.event
 async def on_ready():
     print('Logged in as '+client.user.name+' (ID:'+client.user.id+') | Connected to '+str(len(client.servers))+' servers | Connected to '+str(len(set(client.get_all_members())))+' users')
     print('--------')
     print('--------')
     print('Started SciBot')
     print('Created by Utkarsh')
+ 
+@client.event
+async def on_message_edit(before, after):
+    if before.content == after.content:
+      return
+    if before.author == bot.user:
+      return
+    else:
+      user = before.author
+      member = after.author
+      for channel in user.server.channels:
+        if channel.name == '╰☆☆-multiverse-log-☆☆╮':
+            r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
+            embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
+            embed.set_author(name='Message edited')
+            embed.add_field(name = 'User: **{0}**'.format(user.name),value ='UserID: **{}**'.format(user.id),inline = False)
+            embed.add_field(name = 'Before:',value ='{}'.format(user.content),inline = False)
+            embed.add_field(name = 'After:',value ='{}'.format(member.content),inline = False)
+            embed.add_field(name = 'Channel:',value ='{}'.format(user.channel.name),inline = False)
+            await client.send_message(channel, embed=embed)
  
 @client.event
 async def on_message_delete(message):
