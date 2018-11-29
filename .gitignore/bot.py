@@ -11,9 +11,6 @@ import json
  
 client = Bot(description="SciBot is best", command_prefix="&", pm_help = False)
 dark = discord.Client()
-user_id = message.author.id
-author_level = get_level(user_id)
-author_xp = get_xp(user_id)
 
 @client.event
 async def on_ready():
@@ -25,9 +22,8 @@ async def on_ready():
  
  
 @dark.event
-async def on_message(message):
+async def on_message(message):   
     user_id = message.author.id
-
     author_level = get_level(user_id)
     author_xp = get_xp(user_id)
 
