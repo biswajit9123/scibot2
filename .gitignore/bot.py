@@ -21,50 +21,129 @@ async def on_ready():
  
  
 @client.event
-async def on_member_join(member):
-    with open('users.json', 'r') as f:
-        users = json.load(f)
-    
-    await update_data(users, member)
-    
-    with open ('users.json', 'w') as f:
-        json.dump(users, f)
-  
-@client.event
 async def on_message(message):
-    with open('users.json', 'r') as f:
-        users = json.load(f)
-        
-    await update_data(users, message.author)
-    await add_experience(users, message.author, 5)
-    await level_up(users, message.author, message.channel)
-                        
-    
-    with open ('users.json', 'w') as f:
-        json.dump(users, f)
-        
-async def update_data(users, user):
-    if not user.id in users:
-        users[user.id] = {}
-        users[user.id]['experience'] = 0
-        users[user.id]['level'] = 1
-    
-async def add_experience(users, user, exp):
-    users[user.id]['experience'] += exp
-    
-async def level_up(users, user, channel):
-    experience = users[user.id]['experience']
-    lvl_start = users[user.id]['level']
-    lvl_end = int(experience ** (1/4))
-   
-    if lvl_start < lvl_end:
+    user_id = message.author.id
+
+    author_level = get_level(user_id)
+    author_xp = get_xp(user_id)
+
+    if author_level == 0 and author_xp >= 100:
+        set_level(user_id, 1)
         r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
         embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
         embed.set_author(name='Level Up!')
-        embed.add_field(name = 'User: ',value ='{}'.format(user.name),inline = False)
-        embed.add_field(name = 'Level:',value ='{}'.format(lvl_end),inline = False)
+        embed.add_field(name = 'Congratulations User! ',value ='{}'.format(message.author.name),inline = False)
+        embed.add_field(name = 'You are at ',value ='Level 1! Chat more and stay active to rankup fast',inline = False)
         await client.send_message(channel, embed=embed)
-        users[user.id]['level'] = lvl_end  
+
+    if author_level == 1 and author_xp >= 200:
+        set_level(user_id, 2)
+        r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
+        embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
+        embed.set_author(name='Level Up!')
+        embed.add_field(name = 'Congratulations User! ',value ='{}'.format(message.author.name),inline = False)
+        embed.add_field(name = 'You are at ',value ='Level 2! Chat more and stay active to rankup fast',inline = False)
+        await client.send_message(channel, embed=embed)
+        
+    if author_level == 2 and author_xp >= 250:
+        set_level(user_id, 3)
+        r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
+        embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
+        embed.set_author(name='Level Up!')
+        embed.add_field(name = 'Congratulations User! ',value ='{}'.format(message.author.name),inline = False)
+        embed.add_field(name = 'You are at ',value ='Level 3! Chat more and stay active to rankup fast',inline = False)
+        await client.send_message(channel, embed=embed)
+    if author_level == 3 and author_xp >= 300:
+        set_level(user_id, 4)
+        r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
+        embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
+        embed.set_author(name='Level Up!')
+        embed.add_field(name = 'Congratulations User! ',value ='{}'.format(message.author.name),inline = False)
+        embed.add_field(name = 'You are at ',value ='Level 4! Chat more and stay active to rankup fast',inline = False)
+        await client.send_message(channel, embed=embed)
+    if author_level == 4 and author_xp >= 400:
+        set_level(user_id, 5)
+        r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
+        embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
+        embed.set_author(name='Level Up!')
+        embed.add_field(name = 'Congratulations User! ',value ='{}'.format(message.author.name),inline = False)
+        embed.add_field(name = 'You are at ',value ='Level 5! Chat more and stay active to rankup fast',inline = False)
+        await client.send_message(channel, embed=embed)
+    if author_level == 8 and author_xp >= 700:
+        set_level(user_id, 9)
+        r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
+        embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
+        embed.set_author(name='Level Up!')
+        embed.add_field(name = 'Congratulations User! ',value ='{}'.format(message.author.name),inline = False)
+        embed.add_field(name = 'You are at ',value ='Level 9! Chat more and stay active to rankup fast',inline = False)
+        await client.send_message(channel, embed=embed)
+    if author_level == 9 and author_xp >= 1000:
+        set_level(user_id, 10)
+        r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
+        embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
+        embed.set_author(name='Level Up!')
+        embed.add_field(name = 'Congratulations User! ',value ='{}'.format(message.author.name),inline = False)
+        embed.add_field(name = 'You are at ',value ='Level 10! Chat more and stay active to rankup fast',inline = False)
+        await client.send_message(channel, embed=embed)
+
+    if message.content.lower().startswith('mv!xp'):
+        await client.send_message(message.channel, "You have `{}` XP!".format(get_xp(message.author.id)))
+
+    if message.content.lower().startswith('mv!lvl'):
+        level = get_level(user_id)
+        await client.send_message(message.channel, "You are at Level: {}".format(level))
+
+    user_add_xp(message.author.id, 2)
+
+
+def user_add_xp(user_id: int, xp: int):
+    if os.path.isfile("users.json"):
+        try:
+            with open('users.json', 'r') as fp:
+                users = json.load(fp)
+            users[user_id]['xp'] += xp
+            with open('users.json', 'w') as fp:
+                json.dump(users, fp, sort_keys=True, indent=4)
+        except KeyError:
+            with open('users.json', 'r') as fp:
+                users = json.load(fp)
+            users[user_id] = {}
+            users[user_id]['xp'] = xp
+            with open('users.json', 'w') as fp:
+                json.dump(users, fp, sort_keys=True, indent=4)
+    else:
+        users = {user_id: {}}
+        users[user_id]['xp'] = xp
+        with open('users.json', 'w') as fp:
+            json.dump(users, fp, sort_keys=True, indent=4)
+
+
+def get_xp(user_id: int):
+    if os.path.isfile('users.json'):
+        with open('users.json', 'r') as fp:
+            users = json.load(fp)
+        return users[user_id]['xp']
+    else:
+        return 0
+
+
+def set_level(user_id: int, level: int):
+    if os.path.isfile('users.json'):
+        with open('users.json', 'r') as fp:
+            users = json.load(fp)
+        users[user_id]["level"] = level
+        with open('users.json', 'w') as fp:
+            json.dump(users, fp, sort_keys=True, indent=4)
+
+
+def get_level(user_id: int):
+    if os.path.isfile('users.json'):
+        try:
+            with open('users.json', 'r') as fp:
+                users = json.load(fp)
+            return users[user_id]['level']
+        except KeyError:
+            return 0   
  
 @client.event
 async def on_message_edit(before, after):
