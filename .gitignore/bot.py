@@ -18,26 +18,7 @@ async def on_ready():
     print('Started SciBot')
     print('Created by Utkarsh')
  
-@client.event
-async def on_message_edit(before, after):
-    if before.content == after.content:
-      return
-    if before.author == client.user:
-      return
-    else:
-      user = before.author
-      member = after.author
-      for channel in user.server.channels:
-        if channel.name == '╰☆☆-multiverse-log-☆☆╮':
-            r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-            embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
-            embed.set_author(name='Message edited')
-            embed.add_field(name = 'User: **{0}**'.format(user.name),value ='UserID: **{}**'.format(user.id),inline = False)
-            embed.add_field(name = 'Before:',value ='{}'.format(before.content),inline = False)
-            embed.add_field(name = 'After:',value ='{}'.format(after.content),inline = False)
-            embed.add_field(name = 'Channel:',value ='{}'.format(user.channel.name),inline = False)
-            await client.send_message(channel, embed=embed)
- 
+
 @client.event
 async def on_message_delete(message):
     if message.author.bot:
