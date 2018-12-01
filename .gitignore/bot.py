@@ -73,47 +73,47 @@ async def on_message(message):
           msg = 'Use ``mv!help`` to get list of all commands of MultiVerse Official or If you are having any other problem with bot then inform our staffs in our support server server'.format(message)
           msg2 = await client.send_message(message.channel, msg)
           
-      if 'Who is your creator bot?' in message.content:
+      if 'Who is your creator <@515403515217313795>?' in message.content:
           msg = 'DarkLegend#3807 is my creator'.format(message)
           msg2 = await client.send_message(message.channel, msg)
          
-      if 'hi bot' in message.content:
+      if 'hi <@515403515217313795>' in message.content:
           msg = 'Hello {}'.format(message.author.name)
           msg2 = await client.send_message(message.channel, msg)
          
-      if 'hello bot' in message.content:
+      if 'hello <@515403515217313795>' in message.content:
           msg = 'Hello {}'.format(message.author.name)
           msg2 = await client.send_message(message.channel, msg)
          
-      if 'Hi bot' in message.content:
-          msg = 'Hello {}'.format(message.author.name)
-          msg2 = await client.send_message(message.channel, msg)
-          
-      if 'Hello bot' in message.content:
+      if 'Hi <@515403515217313795>' in message.content:
           msg = 'Hello {}'.format(message.author.name)
           msg2 = await client.send_message(message.channel, msg)
           
-      if 'how are you bot?' in message.content:
+      if 'Hello <@515403515217313795>' in message.content:
+          msg = 'Hello {}'.format(message.author.name)
+          msg2 = await client.send_message(message.channel, msg)
+          
+      if 'how are you <@515403515217313795>?' in message.content:
           msg = 'I am fine what about you? {}'.format(message.author.name)
           msg2 = await client.send_message(message.channel, msg)
          
-      if 'How are you bot?' in message.content:
+      if 'How are you <@515403515217313795>?' in message.content:
           msg = 'I am fine what about you? {}'.format(message.author.name)
           msg2 = await client.send_message(message.channel, msg)
           
-      if 'sup bot' in message.content:
+      if 'sup <@515403515217313795>' in message.content:
           msg = 'I am fine what about you? {}'.format(message.author.name)
           msg2 = await client.send_message(message.channel, msg)
          
-      if 'Sup bot' in message.content:
+      if 'Sup <@515403515217313795>' in message.content:
           msg = 'I am fine what about you? {}'.format(message.author.name)
           msg2 = await client.send_message(message.channel, msg)         
           
-      if 'I am also fine bot' in message.content:
+      if 'I am also fine <@515403515217313795>' in message.content:
           msg = 'Cool! {}'.format(message.author.name)
           msg2 = await client.send_message(message.channel, msg)          
          
-      if 'i am also fine bot' in message.content:
+      if 'i am also fine <@515403515217313795>' in message.content:
           msg = 'Cool! {}'.format(message.author.name)
           msg2 = await client.send_message(message.channel, msg)          
           
