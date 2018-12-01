@@ -68,10 +68,6 @@ async def on_message(message):
       if message.content.startswith('mv!donate'):
           msg = '**Support us by donating us;** https://www.paypal.me/RVerma181'
           await client.send_message(message.channel, msg)
-               
-      if '<@515403515217313795>' in message.content:
-          msg = 'Use ``mv!help`` to get list of all commands of MultiVerse Official or If you are having any other problem with bot then inform our staffs in our support server server'.format(message)
-          msg2 = await client.send_message(message.channel, msg)
           
       if 'Who is your creator <@515403515217313795>?' in message.content:
           msg = 'DarkLegend#3807 is my creator'.format(message)
