@@ -69,7 +69,7 @@ async def on_message(message):
           msg = '**Support us by donating us;** https://www.paypal.me/RVerma181'
           await client.send_message(message.channel, msg)
         
-      if 'MultiVerse Official#6467' in message.content:
+      if 'MultiVerse Official' in message.content:
           msg = 'Use ``mv!help`` to get list of all commands of MultiVerse Official or If you are having any other problem with bot then inform our staffs in our support server server'.format(message)
           msg2 = await client.send_message(message.channel, msg)
         
