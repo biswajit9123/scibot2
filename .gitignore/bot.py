@@ -9,7 +9,7 @@ import colorsys
 import random
 import json
  
-client = Bot(description="SciBot is best", command_prefix="&", pm_help = False)
+client = Bot(description="MyBot is best", command_prefix="&", pm_help = False)
 dark = discord.Client()
 
 @client.event
@@ -63,6 +63,8 @@ async def on_message_delete(message):
 async def on_message(message):
     user = message.author
     if message.author.bot:
+      return
+    if message.content.startswith('mv!say'):
       return
     else:
       if message.content.startswith('mv!donate'):
