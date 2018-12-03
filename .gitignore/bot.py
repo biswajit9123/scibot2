@@ -9,18 +9,61 @@ import colorsys
 import random
 import json
  
-client = Bot(description="MyBot is best", command_prefix="&", pm_help = False)
-dark = discord.Client()
+client = Bot(description="MyBot is best", command_prefix="mv!", pm_help = False)
+client.remove_command('help')
 
 @client.event
 async def on_ready():
-    print('Logged in as '+client.user.name+' (ID:'+client.user.id+') | Connected to '+str(len(client.servers))+' servers | Connected to '+str(len(set(client.get_all_members())))+' users')
-    print('--------')
-    print('--------')
-    print('Started SciBot')
-    print('Created by Utkarsh')
- 
- 
+    global amounts
+    try:
+        with open('amounts.json') as f:             
+            amounts = json.load(f)
+    except FileNotFoundError:
+        print("Could not load amounts.json")
+        amounts = {}
+       
+@client.command(pass_context=True)
+async def balance(ctx):
+    id = ctx.message.author.id
+    if id in amounts:
+        await client.say("You have {} in the bank".format(amounts[id]))
+    else:
+        await client.say("You do not have an account")
+
+@client.command(pass_context=True)
+async def register(ctx):
+    id = ctx.message.author.id
+    if id not in amounts:
+        amounts[id] = 100
+        await client.say("You are now registered")
+        _save()
+    else:
+        await client.say("You already have an account")
+
+@client.command(pass_context=True)
+async def transfer(ctx, amount: int, other: discord.Member):
+    primary_id = ctx.message.author.id
+    other_id = other.id
+    if primary_id not in amounts:
+        await client.say("You do not have an account")
+    elif other_id not in amounts:
+        await client.say("The other party does not have an account")
+    elif amounts[primary_id] < amount:
+        await client.say("You cannot afford this transaction")
+    else:
+        amounts[primary_id] -= amount
+        amounts[other_id] += amount
+        await client.say("Transaction complete")
+    _save()
+
+def _save():
+    with open('amounts.json', 'w+') as f:
+        json.dump(amounts, f)
+
+@client.command()
+async def save():
+    _save() 
+
 @client.event
 async def on_message_edit(before, after):
     if before.content == after.content:
