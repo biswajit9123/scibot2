@@ -110,6 +110,14 @@ async def on_message(message):
           msg = 'Hello {}'.format(message.author.name)
           msg2 = await client.send_message(message.channel, msg)
          
+      if 'bye <@515403515217313795>' in message.content:
+          msg = 'Bye {}'.format(message.author.name)
+          msg2 = await client.send_message(message.channel, msg)
+         
+      if 'Bye <@515403515217313795>' in message.content:
+          msg = 'Bye {}'.format(message.author.name)
+          msg2 = await client.send_message(message.channel, msg)
+                 
       if 'hello <@515403515217313795>' in message.content:
           msg = 'Hello {}'.format(message.author.name)
           msg2 = await client.send_message(message.channel, msg)
