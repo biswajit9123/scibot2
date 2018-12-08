@@ -98,7 +98,7 @@ async def on_message(message):
     if message.content.startswith('mv!say'):
       return
     else:
-      if message.content.startswith('$cool'):
+      if message.content.startswith('mv!apply'):
           await client.send_message(message.channel, 'What is your bot ID?')
             
           def check(msg):
