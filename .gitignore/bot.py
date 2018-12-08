@@ -1,6 +1,6 @@
 import discord
 import asyncio
-from discord.ext.commands import Bot
+from discord.ext import commands
 import platform
 import time
 import os
@@ -8,7 +8,7 @@ import colorsys
 import random
 import json
  
-client = Bot(description="MyBot is best", command_prefix="mv!", pm_help = False)
+client= commands.Bot(description="MyBot is best", command_prefix="mv!", pm_help = False)
 client.remove_command('help')
 
 @client.event
