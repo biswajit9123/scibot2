@@ -97,16 +97,6 @@ async def on_message(message):
     if message.content.startswith('mv!say'):
       return
     else:
-      if message.content.startswith('mv!apply'):
-          await client.send_message(message.channel, 'What is your bot ID?')
-            
-          def check(msg):
-              return msg.content.startswith('mv!id')
-    
-          msg = await client.wait_for_message(author=message.author, check=check)
-          botid = message.content[len('mv!id'):].strip()
-          await client.send_message(message.channel, 'So your bot id is: {}'.format(botid))    
-    
       if message.content.startswith('mv!donate'):
           msg = '**Support us by donating us;** https://www.paypal.me/RVerma181'
           await client.send_message(message.channel, msg)
