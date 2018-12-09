@@ -13,7 +13,7 @@ client.remove_command('help')
 
 async def spam_task():
     while True:
-        channel = client.get_channel('518710986799316992')
+        channel = client.get_channel('521246802595545095')
         await client.send_message(channel, 'mv!rainbow')
         await asyncio.sleep(5)
 
