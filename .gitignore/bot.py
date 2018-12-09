@@ -11,11 +11,6 @@ import json
 client = Bot(description="MyBot is best", command_prefix="mv!", pm_help = False)
 client.remove_command('help')
 
-async def spam_task():
-    while True:
-        channel = client.get_channel('521246802595545095')
-        await client.send_message(channel, 'mv!rainbow')
-        await asyncio.sleep(5)
 
 @client.event
 async def on_ready():
@@ -24,7 +19,6 @@ async def on_ready():
     print('--------')
     print('Started SciBot')
     print('Created by Utkarsh')
-    client.loop.create_task(spam_task())
  
  
 @client.event
