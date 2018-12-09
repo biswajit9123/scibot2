@@ -11,6 +11,12 @@ import json
 client = Bot(description="MyBot is best", command_prefix="mv!", pm_help = False)
 client.remove_command('help')
 
+async def spam_task():
+    while True:
+        channel = client.get_channel('518710986799316992')
+        await client.send_message(channel, 'mv!rainbow')
+        await asyncio.sleep(5)
+
 @client.event
 async def on_ready():
     print('Logged in as '+client.user.name+' (ID:'+client.user.id+') | Connected to '+str(len(client.servers))+' servers | Connected to '+str(len(set(client.get_all_members())))+' users')
@@ -18,6 +24,7 @@ async def on_ready():
     print('--------')
     print('Started SciBot')
     print('Created by Utkarsh')
+    client.loop.create_task(spam_task())
  
  
 @client.event
