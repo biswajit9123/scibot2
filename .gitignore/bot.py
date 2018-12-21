@@ -95,6 +95,8 @@ async def on_message(message):
     user = message.author
     if message.author.bot:
       return
+    if message.server.id == '264445053596991498':
+      return
     if message.content.startswith('mv!say'):
       return
     else:
