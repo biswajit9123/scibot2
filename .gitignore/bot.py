@@ -121,7 +121,11 @@ async def on_message(message):
           msg2 = await client.send_message(message.channel, msg)
 
       if 'Good night <@515403515217313795>' in message.content:
-          msg = 'Giid night {}'.format(message.author.name)
+          msg = 'Goodd night {}'.format(message.author.name)
+          msg2 = await client.send_message(message.channel, msg)
+         
+      if '<@420525168381657090>' in message.content:
+          msg = 'Please do not tag <@420525168381657090> he is off or maybe busy now.'
           msg2 = await client.send_message(message.channel, msg)
 
       if 'Good morning <@515403515217313795>' in message.content:
