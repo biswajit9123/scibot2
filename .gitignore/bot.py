@@ -20,6 +20,13 @@ async def on_ready():
     print('Started SciBot')
     print('Created by Utkarsh')
  
+@client.event
+async def on_member_join(member):
+    if member.server.id == "404622530129690624":
+     print("In our server" + member.name + " just joined")
+     nickname = '[GGC]' + member.name
+     await client.change_nickname(member, nickname)
+
  
 @client.event
 async def on_message_edit(before, after):
