@@ -23,10 +23,12 @@ async def on_ready():
 @client.event
 async def on_member_join(member):
     if member.server.id == "404622530129690624":
-     print("In our server" + member.name + " just joined")
-     nickname = '[GGC]' + member.name
-     await client.change_nickname(member, nickname)
-
+      print("In our server" + member.name + " just joined")
+      nickname = '[GGC]' + member.name
+      await client.change_nickname(member, nickname)
+    if member.server.id == "527430758902661121":
+      role = discord.utils.get(member.server.roles, name='Guest')
+      await client.add_roles(member, role)
  
 @client.event
 async def on_message_edit(before, after):
