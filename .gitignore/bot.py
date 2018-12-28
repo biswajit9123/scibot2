@@ -22,6 +22,8 @@ async def on_ready():
  
 @client.event
 async def on_member_join(member):
+    if message.author.bot:
+      return
     if member.server.id == "404622530129690624":
       print("In our server" + member.name + " just joined")
       nickname = '[GGC]' + member.name
