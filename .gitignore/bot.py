@@ -31,7 +31,7 @@ async def on_member_join(member):
     if member.server.id == "527430758902661121":
       role = discord.utils.get(member.server.roles, name='Guest')
       await client.add_roles(member, role)
-      awaot client.semd_message(member, f'Hey {member.name}, Check <#527481608530558980> for more information about our giveaways')
+      awaot client.send_message(member, f'Hey {member.name}, Check <#527481608530558980> for more information about our giveaways')
  
 @client.event
 async def on_message_edit(before, after):
