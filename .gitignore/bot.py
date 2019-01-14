@@ -131,7 +131,7 @@ async def on_message(message):
           msg = 'Bye {}'.format(message.author.name)
           msg2 = await client.send_message(message.channel, msg)
          
-      if message.content.startswith('<@515403515217313795>') and if message.content.endswith('<@515403515217313795>'):
+      if message.content.startswith('<@515403515217313795>') and message.content.endswith('<@515403515217313795>'):
           msg = 'Hey {}, use ``mv!help`` or <@515403515217313795>`` help`` to get all commands list in dm'.format(message.author.name)
           msg2 = await client.send_message(message.channel, msg)
 
