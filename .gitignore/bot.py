@@ -116,7 +116,7 @@ async def on_message(message):
       return
     else:
       if message.content.startswith('mv!donate'):
-          msg = '**Support us by donating us;** https://www.paypal.me/RVerma181'
+          msg = '**Support us by donating us on PayPal:** https://www.paypal.me/RVerma181\n**Support us by donating us on Patreon:** https://www.patreon.com/multiverseofficial'
           await client.send_message(message.channel, msg)
           
       if 'Who is your creator <@515403515217313795>?' in message.content:
