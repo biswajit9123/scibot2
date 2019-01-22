@@ -35,7 +35,8 @@ async def on_member_join(member):
       role = discord.utils.get(member.server.roles, name='Guest')
       await client.add_roles(member, role)
       await client.send_message(member, f'Hey {member.name}, Check <#527481608530558980> for more information about our giveaways')
- 
+
+      
 @client.event
 async def on_message_edit(before, after):
     if before.content == after.content:
