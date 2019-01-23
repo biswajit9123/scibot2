@@ -36,10 +36,10 @@ async def on_member_join(member):
       await client.add_roles(member, role)
       await client.send_message(member, f'Hey {member.name}, Check <#527481608530558980> for more information about our giveaways')
     if member.server.id == "534158752597671956":
-      embed = discord.Embed(title=f'Welcome {member.name} to {member.server.name}', description='Do not forget to check rules and never try to break any one of them', color = 0x36393E)
+      embed = discord.Embed(title=f'Welcome {member.name} to {member.server.name}', description='Hope you will enjoy our content. Do not forget to check rules and never try to break any one of them.', color = 0x36393E)
       embed.add_field(name='__Thanks for joining__', value='**Hope you will be active here.**', inline=True)
       embed.set_thumbnail(url='https://media.giphy.com/media/OkJat1YNdoD3W/giphy.gif') 
-      embed.set_image(url = 'https://i.ibb.co/84PLkD2/ezgif-com-optimize.gif')
+      embed.set_image(url = 'https://cdn.pbrd.co/images/HXJvPMP.gif')
       embed.add_field(name='__Join position__', value='{}'.format(str(member.server.member_count)), inline=True)
       embed.add_field(name='Time of joining', value=member.joined_at)
       await client.send_message(member, embed=embed) 
