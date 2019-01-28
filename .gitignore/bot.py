@@ -129,24 +129,7 @@ async def on_message(message):
     if message.content.startswith('mv!say'):
       return
     else:
-      if content.startswith("mv!translate"):
-        if " " in content:
-          # When the user wants to call for help, or translate to more than english, this will parse their intention
-          args = content.split(" ", 1)[1]
-          langcode = check_language(args,'language')
-          if args.lower() == "help":
-            help_message = "Type **.translate** to translate the message above to english.\n" \
-                           " Type **.translate <language>** to translate it to that language."
-            await client.send_message(message.channel, help_message)
-          elif langcode != "False":
-            translation = translate_message(last_message, langcode)
-            formatted_return = format_response(translation)
-            await discord_client.send_message(message.channel, formatted_return)
-          else:
-            translation = translate_message(last_message, "en")
-            formatted_return = format_response(translation)
-            await client.send_message(message.channel, formatted_return)
-            last_message = content
+
       if message.content.startswith('mv!donate'):
           msg = '**Support us by donating us on PayPal:** https://www.paypal.me/RVerma181\n**Support us by donating us on Patreon:** https://www.patreon.com/multiverseofficial'
           await client.send_message(message.channel, msg)
@@ -232,29 +215,5 @@ async def on_message(message):
           msg2 = await client.send_message(message.channel, msg)          
 
 
-def translate_message(message, target):
-    translate_client = translate.Client.from_service_account_json('api-key.json')
-    result = translate_client.translate(message, target_language=target)
-    return result
 
-
-# Takes in a string that may or may not be a language code.
-# If it is a language code, it returns said code.
-# If it is a language, it returns the affiliated code. If not, it returns -1
-def check_language(code, target):
-    with open('languages.json') as data:
-        languages = json.load(data)
-        for lang in languages:
-            if (lang['language'].lower() == code.lower())or (lang['name'].lower() == code.lower()):
-                return lang[target]
-        return "False"
-
-
-def format_response(response):
-    language_code = response['detectedSourceLanguage']
-    language_name = check_language(language_code, 'name')
-    formatted_return = ("```" + "\n" + " \"" + response['translatedText'] + "\"\n" + "```" + "\n" +
-                        "**Source Language:** " + language_name + " **|** " + language_code + "\n")
-    return formatted_return
-        
 client.run(os.getenv('Token'))
