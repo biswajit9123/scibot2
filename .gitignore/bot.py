@@ -12,8 +12,6 @@ import json
 client = Bot(description="MyBot is best", command_prefix="mv!", pm_help = False)
 client.remove_command('help')
 
-keyfile = open("keys.txt", "r")
-key = keyfile.read(60)
 
 global last_message
 last_message = "This is a placeholder"
