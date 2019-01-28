@@ -4,7 +4,7 @@ from discord.ext.commands import Bot
 import platform
 import time
 import os
-from google.cloud import translate
+
 import colorsys
 import random
 import json
