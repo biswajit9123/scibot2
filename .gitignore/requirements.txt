@@ -1,3 +1,5 @@
 discord.py
 asyncio
 google
+google-cloud
+google-cloud-vision
