@@ -26,7 +26,7 @@ async def on_ready():
     print('Started SciBot')
     print('Created by Utkarsh')
  
-@client.event
+@client.event 
 async def on_member_join(member):
     if member.bot:
       return
