@@ -4,3 +4,5 @@ google
 google-cloud
 google-cloud-vision
 google-api-python-client
+google-cloud-translate
+protobuf
