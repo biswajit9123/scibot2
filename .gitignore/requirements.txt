@@ -3,3 +3,4 @@ asyncio
 google
 google-cloud
 google-cloud-vision
+google-api-python-client
