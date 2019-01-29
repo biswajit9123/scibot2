@@ -76,7 +76,7 @@ async def on_message_delete(message):
       for channel in message.server.channels:
         if channel.name == channelname:
           user = message.author
-      for channel in user.server.channels:
+      for channel in message.author.server.channels:
         if channel.name == '╰☆☆-multiverse-log-☆☆╮':
           logchannel = channel
           r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
