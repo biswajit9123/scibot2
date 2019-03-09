@@ -32,10 +32,15 @@ async def on_member_join(member):
     if member.server.id == "488267422449664011":
       nickname = 'AGC|' + member.name
       await client.change_nickname(member, nickname)
+      return
     if member.server.id == "527430758902661121":
       role = discord.utils.get(member.server.roles, name='Guest')
       await client.add_roles(member, role)
-      await client.send_message(member, f'Hey {member.name}, Check <#527481608530558980> for more information about our giveaways')
+      return
+    if member.server.id == "552050721915404301":
+      role = discord.utils.get(member.server.roles, name='WarLord Community')
+      await client.add_roles(member, role)
+      return
     if member.server.id == "534158752597671956":
       embed = discord.Embed(title=f'Welcome {member.name} to {member.server.name}', description='Hope you will enjoy our content. Do not forget to check rules and never try to break any one of them.', color = 0x36393E)
       embed.add_field(name='__Thanks for joining__', value='**Hope you will be active here.**', inline=True)
@@ -44,6 +49,7 @@ async def on_member_join(member):
       embed.add_field(name='__Join position__', value='{}'.format(str(member.server.member_count)), inline=True)
       embed.add_field(name='Time of joining', value=member.joined_at)
       await client.send_message(member, embed=embed) 
+      return
       
 @client.event
 async def on_message_edit(before, after):
